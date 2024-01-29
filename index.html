@@ -24,7 +24,7 @@
             height: 19.01cm;
             top: 0;
             left: 0;
-            background-image: url('https://telegra.ph/file/d19ba4d177977332ed9e8.jpg');
+            background-image: url('https://telegra.ph/file/e7a5b55d0e4f4e61991c0.jpg');
             background-size: cover;
         }
 
@@ -51,6 +51,38 @@
             text-align: center;
             color: white;
         }
+
+        .telegram-button {
+            position: absolute;
+            bottom: 20px; /* Небольшой отступ от нижнего края */
+            left: 20px; /* Небольшой отступ от левого края */
+            background: #B22222; /* Цвет фона кнопки */
+            border-radius: 50%;
+            width: 110px; /* Увеличенный размер кнопки в 2 раза */
+            height: 110px; /* Увеличенный размер кнопки в 2 раза */
+            color: #fff;
+            text-align: center;
+            line-height: 110px; /* Центровка иконки */
+            font-size: 60px; /* Увеличенный размер иконки */
+            z-index: 999;
+            animation: animate 1.5s linear infinite; /* Анимация */
+            background-image: url('https://telegra.ph/file/29a43da1f7e1a4b93ff96.png'); /* Иконка кнопки */
+            background-size: cover;
+        }
+
+        @keyframes animate {
+            0% {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1.2);
+                opacity: 0;
+            }
+        }
     </style>
 </head>
 
@@ -60,6 +92,11 @@
             <div id="overlay-rectangle">
                 <p id="text"></p>
             </div>
+            <a href="https://t.me/dedushkaDbai" target="_blank" title="Telegram">
+                <div class="telegram-button">
+                    <!-- Нет необходимости вставлять иконку здесь, так как она задана через background-image в CSS -->
+                </div>
+            </a>
         </div>
     </div>
 
